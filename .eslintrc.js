@@ -6,9 +6,8 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:prettier/recommended',
-    'prettier/@typescript-eslint',
   ],
-  plugins: ['@typescript-eslint', 'react', 'import'],
+  plugins: ['@typescript-eslint', 'react', 'import', 'unused-imports'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     sourceType: 'module',
@@ -24,6 +23,8 @@ module.exports = {
     quotes: ['warn', 'single'],
     'sort-imports': 0,
     'import/order': [2, { alphabetize: { order: 'asc' } }],
+    '@typescript-eslint/no-unused-vars': 'off',
+    'unused-imports/no-unused-imports-ts': 'warn',
   },
   settings: {
     react: {
